@@ -27,6 +27,7 @@ public class Hooks{
     	driver = new ChromeDriver();
     	driver.manage().deleteAllCookies();
     	driver.manage().window().maximize();
+    	driver.switchTo().alert().accept();
     }
 
      
@@ -45,6 +46,7 @@ public class Hooks{
         } catch (WebDriverException somePlatformsDontSupportScreenshots) {
             System.err.println(somePlatformsDontSupportScreenshots.getMessage());
         }
+        
         
         }
         driver.quit();

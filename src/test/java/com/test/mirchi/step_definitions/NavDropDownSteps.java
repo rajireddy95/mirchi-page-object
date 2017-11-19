@@ -1,0 +1,28 @@
+package com.test.mirchi.step_definitions;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.PageFactory;
+
+import com.test.mirchi.modules.NavDropDownAction;
+import com.test.mirchi.pageobjects.MirchiHomePage;
+
+import cucumber.api.java.en.Then;
+
+public class NavDropDownSteps {
+
+    public WebDriver driver;
+    
+
+    public NavDropDownSteps()
+    {
+        driver = Hooks.driver;
+        
+    }
+    
+    @Then("^I select a links and verify if works and lands on right page$")
+    public void i_select_a_links_and_verify_if_works_and_lands_on_right_page() throws Throwable {
+    	PageFactory.initElements(driver,MirchiHomePage.FooterPage.class);
+    	NavDropDownAction.Execute(driver);
+    }
+
+}
