@@ -25,7 +25,7 @@ public class HeaderNavSteps {
     
     @Then("^I select a links and verify if works and lands on right page$")
     public void i_select_a_links_and_verify_if_works_and_lands_on_right_page() throws Throwable {
-    	PageFactory.initElements(driver,MirchiHomePage.HeaderPage.class);
+    	PageFactory.initElements(driver,MirchiHomePage.class);
     	HeaderNavAction.Execute(driver);
     }
 
