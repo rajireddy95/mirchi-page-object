@@ -23,10 +23,11 @@ public class Hooks{
      */
     public void openBrowser() throws MalformedURLException {
     	System.out.println("Called openBrowser");
-    	System.setProperty("webdriver.chrome.driver", "/Users/chandu/Documents/softwares/chromedriver");
+    	System.setProperty("webdriver.chrome.driver", "C:\\chromedriver_win32\\chromedriver.exe");
     	driver = new ChromeDriver();
     	driver.manage().deleteAllCookies();
     	driver.manage().window().maximize();
+    	driver.switchTo().alert().accept();
     }
 
      
@@ -45,6 +46,7 @@ public class Hooks{
         } catch (WebDriverException somePlatformsDontSupportScreenshots) {
             System.err.println(somePlatformsDontSupportScreenshots.getMessage());
         }
+        
         
         }
         driver.quit();
