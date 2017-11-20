@@ -17,8 +17,8 @@ public class HeaderNavAction {
 		List<WebElement> items = driver.findElements(By.className("menu-item"));
 		Reporter.log("Found Menu links: ", items.size());
 		Assert.assertEquals(5,items.size());
-		MirchiHomePage.HeaderPage.menu_item.click();;
+		MirchiHomePage.HeaderPage.menu_item.click();
 
-		Reporter.log("Select product successful");
+		Reporter.log("");
 	}
 }

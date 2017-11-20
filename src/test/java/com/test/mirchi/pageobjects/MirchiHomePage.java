@@ -5,6 +5,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 public class MirchiHomePage extends BaseClass{
 
+	
+
 	public MirchiHomePage(WebDriver driver){
 		super(driver);
 	}    
@@ -19,6 +21,7 @@ public class MirchiHomePage extends BaseClass{
 	
 	@FindBy(how=How.LINK_TEXT, using="Sign out")
 	public static WebElement sign_out;
+
 		
 	public static class HeaderPage 
 	{
@@ -36,20 +39,16 @@ public class MirchiHomePage extends BaseClass{
 		{
 			@FindBy(how=How.LINK_TEXT,using="Dresses")
 			public static WebElement dresses;
-
-			public static class DressesPage
-			{
-
-				@FindBy(how=How.LINK_TEXT,using="Summer Dresses")
-				public static WebElement summer_dresses;
-
-			}
-		}
-		
-
-		
-	}
 	
+		}
+	}
+	public static class FooterPage
+	{
+
+		@FindBy(how=How.CLASS_NAME,using=".footer-social-wrap a")
+		public static WebElement footer;
+
+	}
 }
 		
 
