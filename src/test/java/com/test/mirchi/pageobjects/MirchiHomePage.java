@@ -45,7 +45,7 @@ public class MirchiHomePage extends BaseClass{
 	public static class FooterPage
 	{
 
-		@FindBy(how=How.CLASS_NAME,using=".footer-social-wrap a")
+		@FindBy(how=How.CSS,using=".footer-social-wrap a")
 		public static WebElement footer;
 
 	}

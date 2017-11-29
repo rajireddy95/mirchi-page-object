@@ -8,6 +8,8 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.test.mirchi.helpers.DataHelper;
 import com.test.mirchi.modules.FooterPageAction;
+import com.test.mirchi.pageobjects.MirchiHomePage;
+
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
@@ -30,7 +32,7 @@ public class FooterPageSteps {
 
 	@Then("^I select all links and verify if works and lands on right page$")
 	public void i_select_all_links_and_verify_if_works_and_lands_on_right_page() throws Throwable {
-		PageFactory.initElements(driver, FooterPageAction.class);
+		PageFactory.initElements(driver, MirchiHomePage.FooterPage.class);
     	FooterPageAction.Execute(driver);
 	   
 	}

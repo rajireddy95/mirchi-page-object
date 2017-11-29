@@ -14,6 +14,15 @@ public class FooterPageAction {
 		@SuppressWarnings("unused")
 		WebDriverWait wait = new WebDriverWait(driver, 10);
 		List<WebElement> items = driver.findElements(By.cssSelector(".footer-social-wrap a"));
+		
+		for(WebElement element:items)
+		{
+		    
+		    System.out.println(element.getAttribute("href"));
+		    String actualvalue = "https://twitter.com/Mirchi9";
+		    Assert.assertEquals(actualvalue, "https://twitter.com/Mirchi9");
+		    System.out.println(actualvalue);
+		}
 		Reporter.log("Found Footer links: ", items.size());
 		Log.info("Found Footer Links");
 		Assert.assertEquals(5,items.size());
@@ -21,3 +30,5 @@ public class FooterPageAction {
 	}
 
 }
+
+

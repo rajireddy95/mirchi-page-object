@@ -23,7 +23,7 @@ public class Hooks{
      */
     public void openBrowser() throws MalformedURLException {
     	System.out.println("Called openBrowser");
-    	System.setProperty("webdriver.chrome.driver", "/Users/chandu/Documents/softwares/chromedriver");
+    	System.setProperty("webdriver.chrome.driver", "C:\\chromedriver_win32\\2.33\\chromedriver.exe");
     	driver = new ChromeDriver();
     	driver.manage().deleteAllCookies();
     	driver.manage().window().maximize();
@@ -35,7 +35,7 @@ public class Hooks{
      * Embed a screenshot in test report if test is marked as failed
      */
     public void embedScreenshot(Scenario scenario) {
-       
+      
         if(scenario.isFailed()) {
         try {
         	 scenario.write("Current Page URL is " + driver.getCurrentUrl());
