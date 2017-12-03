@@ -1,7 +1,10 @@
 package com.test.mirchi.pageobjects;
+import java.util.List;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.FindBys;
 import org.openqa.selenium.support.How;
 public class MirchiHomePage extends BaseClass{
 
@@ -49,6 +52,12 @@ public class MirchiHomePage extends BaseClass{
 		public static WebElement footer;
 
 	}
+	public static class GoogleAdsPage{
+
+		@FindBys( {@FindBy(className = "adsbygoogle")} )
+		 public static List<WebElement> ads;
+	}
+	
 }
 		
 
