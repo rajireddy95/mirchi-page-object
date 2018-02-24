@@ -7,8 +7,8 @@ import com.test.mirchi.pageobjects.MirchiHomePage;
 public class MirchiHomePageAction {
 	public static void Execute(WebDriver driver) throws Exception{
 		MirchiHomePage.navbar.click();
-		Log.info("Click action is perfromed on My Account link" );
+		Log.info("Click action is perfromed on NavBar link" );
 		
-		Reporter.log("SignIn Action is successfully perfomred");
+		Reporter.log("Click action is perfromed on NavBar link");
 	}
 }
